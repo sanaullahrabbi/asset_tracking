@@ -6,8 +6,9 @@ router = DefaultRouter()
 router.register(r"companies", CompanyViewSet)
 router.register(r"employees", EmployeeViewSet)
 router.register(r"devices", DeviceViewSet)
-router.register(r"checkout-logs", DeviceLogViewSet)
+router.register(r"device-logs", DeviceLogViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("docs/", include("assets.swagger")),
 ]
